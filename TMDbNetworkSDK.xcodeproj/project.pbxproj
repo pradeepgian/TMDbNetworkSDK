@@ -8,11 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		804C16EF2BB8B6A900257239 /* TMDbNetworkSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 804C16EE2BB8B6A900257239 /* TMDbNetworkSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		804C17072BB8B6CB00257239 /* LatestMoviesEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C16F82BB8B6CB00257239 /* LatestMoviesEndPoint.swift */; };
+		804C17082BB8B6CB00257239 /* PopularMoviesEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C16F92BB8B6CB00257239 /* PopularMoviesEndPoint.swift */; };
+		804C170A2BB8B6CB00257239 /* TMDbNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C16FB2BB8B6CB00257239 /* TMDbNetworkService.swift */; };
+		804C170C2BB8B6CB00257239 /* TMDbNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C16FD2BB8B6CB00257239 /* TMDbNetworkClient.swift */; };
+		804C170F2BB8B6CB00257239 /* TMDbNetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C17012BB8B6CB00257239 /* TMDbNetworkServiceProtocol.swift */; };
+		804C17102BB8B6CB00257239 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C17022BB8B6CB00257239 /* HTTPMethod.swift */; };
+		804C17112BB8B6CB00257239 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C17032BB8B6CB00257239 /* NetworkError.swift */; };
+		804C17122BB8B6CB00257239 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C17042BB8B6CB00257239 /* EndPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		804C16EB2BB8B6A900257239 /* TMDbNetworkSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TMDbNetworkSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		804C16EE2BB8B6A900257239 /* TMDbNetworkSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDbNetworkSDK.h; sourceTree = "<group>"; };
+		804C16F82BB8B6CB00257239 /* LatestMoviesEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LatestMoviesEndPoint.swift; sourceTree = "<group>"; };
+		804C16F92BB8B6CB00257239 /* PopularMoviesEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularMoviesEndPoint.swift; sourceTree = "<group>"; };
+		804C16FB2BB8B6CB00257239 /* TMDbNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDbNetworkService.swift; sourceTree = "<group>"; };
+		804C16FD2BB8B6CB00257239 /* TMDbNetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDbNetworkClient.swift; sourceTree = "<group>"; };
+		804C17012BB8B6CB00257239 /* TMDbNetworkServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDbNetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		804C17022BB8B6CB00257239 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		804C17032BB8B6CB00257239 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		804C17042BB8B6CB00257239 /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,8 +62,32 @@
 			isa = PBXGroup;
 			children = (
 				804C16EE2BB8B6A900257239 /* TMDbNetworkSDK.h */,
+				804C16FD2BB8B6CB00257239 /* TMDbNetworkClient.swift */,
+				804C16FB2BB8B6CB00257239 /* TMDbNetworkService.swift */,
+				804C16F72BB8B6CB00257239 /* EndPoints */,
+				804C17002BB8B6CB00257239 /* Utility */,
 			);
 			path = TMDbNetworkSDK;
+			sourceTree = "<group>";
+		};
+		804C16F72BB8B6CB00257239 /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				804C16F82BB8B6CB00257239 /* LatestMoviesEndPoint.swift */,
+				804C16F92BB8B6CB00257239 /* PopularMoviesEndPoint.swift */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		804C17002BB8B6CB00257239 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				804C17012BB8B6CB00257239 /* TMDbNetworkServiceProtocol.swift */,
+				804C17022BB8B6CB00257239 /* HTTPMethod.swift */,
+				804C17032BB8B6CB00257239 /* NetworkError.swift */,
+				804C17042BB8B6CB00257239 /* EndPoint.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +133,7 @@
 				TargetAttributes = {
 					804C16EA2BB8B6A900257239 = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 					};
 				};
 			};
@@ -129,6 +170,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				804C170A2BB8B6CB00257239 /* TMDbNetworkService.swift in Sources */,
+				804C170F2BB8B6CB00257239 /* TMDbNetworkServiceProtocol.swift in Sources */,
+				804C170C2BB8B6CB00257239 /* TMDbNetworkClient.swift in Sources */,
+				804C17082BB8B6CB00257239 /* PopularMoviesEndPoint.swift in Sources */,
+				804C17102BB8B6CB00257239 /* HTTPMethod.swift in Sources */,
+				804C17112BB8B6CB00257239 /* NetworkError.swift in Sources */,
+				804C17122BB8B6CB00257239 /* EndPoint.swift in Sources */,
+				804C17072BB8B6CB00257239 /* LatestMoviesEndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +312,7 @@
 		804C16F32BB8B6A900257239 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -286,6 +336,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -294,6 +345,7 @@
 		804C16F42BB8B6A900257239 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
